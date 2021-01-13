@@ -1,9 +1,7 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
-from contacts.spiders.contacts_spider import ContactSpider
+from spiders.contacts_spider import ContactSpider
 
-
-FILE_NAME = 'contacts.json'
 SETTINGS = {
     'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
     'FEED_FORMAT': 'json',

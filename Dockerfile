@@ -1,6 +1,6 @@
 FROM debian:buster
 
-ADD contacts /opt/contacts-scrapy
+ADD contacts /opt/contacts
 
 RUN apt-get update && \
     apt-get install --assume-yes --no-install-recommends \
@@ -22,4 +22,4 @@ RUN python3 -m pip install --no-cache-dir --upgrade \
         && \
     python3 -m pip install --no-cache-dir --upgrade scrapy
 
-CMD  python3 /opt/contacts-scrapy/spiders/contacts_spider.py
+CMD python3 /opt/contacts/__main__.py
