@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM ubuntu:18.04
 
 ADD contacts /opt/contacts
 
