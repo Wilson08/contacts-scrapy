@@ -1,18 +1,14 @@
 import scrapy
-import phonenumbers
+from scrapy.crawler import CrawlerProcess
+
 import re
+import sys
 
-
-class QuotesSpider(scrapy.Spider):
+class ContactSpider(scrapy.Spider):
     name = "contacts"
 
     def start_requests(self):
-        urls = [
-            'https://www.cmsenergy.com/contact-us/default.aspx',
-            'https://www.phosagro.com/contacts/',
-            'https://www.illion.com.au/contact-us/',
-            'https://www.cialdnb.com/'
-        ]
+        urls = sys.stdin.readlines()
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
@@ -35,11 +31,9 @@ class QuotesSpider(scrapy.Spider):
         numbers = re.findall(regex, response.text)
         for n in numbers:
             phones.add(n)
+
         yield {
             'logo': logo,
             'phones': phones,
             'website': response.url,
         }
-
-
-
