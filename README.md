@@ -22,7 +22,7 @@ This project contains only the **`contacts`** spider.
 
 ## Install
 To install the project run the commands on root directory:
-- `python setup sdist`
+- `python setup.py sdist`
 - `pip install -U ./dist/contacts-scrapy-1.0.1.tar.gz`
 
     
