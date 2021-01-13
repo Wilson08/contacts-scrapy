@@ -16,11 +16,11 @@ The extracted data looks like this sample:
 ## Spiders
 This project contains only the **`contacts`** spider.
 
-#  Requirements
+##  Requirements
 - Python => 3.6
 - Scrapy
 
-# Install
+## Install
 To install the project run the commands on root directory:
 - `python setup sdist`
 - `pip install -U ./dist ./dist/contacts-scrapy-1.0.1.tar.gz`
