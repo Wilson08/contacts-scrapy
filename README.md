@@ -31,6 +31,9 @@ To install the project run the commands on root directory:
 You can run a spider using the `python -m` command, such as:
 
     $ cat websites.txt | python -m contacts
+    
+ ![](./images/execPackage.gif)   
+ 
 
 # Docker
 Run the commands on root directory
@@ -42,3 +45,5 @@ Run the commands on root directory
 ## Run
 
     $ cat websites.txt | docker run -i contacts-scrapy
+    
+![](./images/execDocker.gif)  
