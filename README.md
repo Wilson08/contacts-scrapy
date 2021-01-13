@@ -1,10 +1,6 @@
 # contacts-scrapy
 This is a Scrapy project to scrape phone and logo from any WEB site.
 
-#  Requirements
-- Python => 3.6
-- Scrapy
-
 ## Extracted data
 
 This project extracts quotes, combined with the respective author names and tags.
@@ -19,13 +15,30 @@ The extracted data looks like this sample:
     
 ## Spiders
 This project contains only the **`contacts`** spider.
+
+##  Requirements
+- Python => 3.6
+- Scrapy
+
+## Install
+To install the project run the commands on root directory:
+- `python setup sdist`
+- `pip install -U ./dist/contacts-scrapy-1.0.1.tar.gz`
+
     
 ## Running the spiders
 
-You can run a spider using the `scrapy crawl` command, such as:
+You can run a spider using the `python -m` command, such as:
 
-    $ scrapy crawl contacts
+    $ cat websites.txt | python -m contacts
 
-If you want to save the scraped data to a file, you can pass the `-o` option:
+# Docker
+Run the commands on root directory
+
+## Build
+
+    $ docker build -t contacts-scrapy .
     
-    $ scrapy crawl contacts -o contacts.json
+## Run
+
+    $ cat websites.txt | docker run -i contacts-scrapy
